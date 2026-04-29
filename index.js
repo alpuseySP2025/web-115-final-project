@@ -29,7 +29,6 @@ function onFormSubmit(event) {
 const form = document.getElementById("addTask");
 form.addEventListener("submit", onFormSubmit);
 
-
 function addTask(name, priority, isImportant) {
     const addedDate = new Date();
     const id = nextId;
@@ -41,7 +40,7 @@ function addTask(name, priority, isImportant) {
         name,
         priority,
         isImportant,
-        isComplete: false,
+        isCompleted: false,
         date: addedDate,
     });
 
@@ -144,12 +143,12 @@ function markTask(id) {
     if (!task) return;
 
     // Toggle completion status and display all tasks
-    task.isComplete = !task.isComplete;
+    task.isCompleted = !task.isCompleted;
     printTasks();
 
     // Determine which initial style to use, then add strikethrough if completed
     let style = task.isImportant ? importantStyle : "";
-    if (task.isComplete) {
+    if (task.isCompleted) {
         style += completeStyle;
     }
 
