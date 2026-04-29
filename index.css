@@ -3,7 +3,6 @@
     --container-color: blanchedalmond;
     --add-container-color: darkkhaki;
     --task-container-color: rgb(233, 198, 122);
-    --task-container-important: rgb(207, 75, 31);
     --add-button-color: rgb(58, 58, 156);
     --delete-button-color: rgb(160, 41, 41);
 }
@@ -67,11 +66,6 @@ label {
     padding: 20px;
     background-color: var(--task-container-color);
     margin-bottom: 20px;
-}
-
-.urgent {
-    font-weight: bold;
-    background-color: var(--task-container-important);
 }
 
 .complete {
