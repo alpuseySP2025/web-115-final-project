@@ -1,0 +1,141 @@
+/* COLOR VARIABLES */
+:root {
+    --container-color: blanchedalmond;
+    --add-container-color: darkkhaki;
+    --task-container-color: rgb(233, 198, 122);
+    --task-container-important: rgb(207, 75, 31);
+    --add-button-color: rgb(58, 58, 156);
+    --delete-button-color: rgb(160, 41, 41);
+}
+
+
+/* ELEMENT STYLES */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+label {
+    display: block;
+}
+
+
+/* UTILITY CLASSES */
+.centeredText {
+    text-align: center;
+    width: 100%;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.splitSides {
+    justify-content: space-between;
+}
+
+
+/* CONTAINER STYLES */
+.mainContainer {
+    max-width: 1000px;
+    background-color: var(--container-color);
+    height: 100%;
+    width: 90%;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.addContainer {
+    width: 95%;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: var(--add-container-color);
+}
+
+.taskContainer {
+    width: 95%;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: var(--task-container-color);
+    margin-bottom: 20px;
+}
+
+.urgent {
+    font-weight: bold;
+    background-color: var(--task-container-important);
+}
+
+.complete {
+    text-decoration: line-through;
+}
+
+.template {
+    display: none;
+}
+
+
+/* INPUT STYLES */
+input, select {
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid black;
+    margin-top: 5px;
+}
+
+select:open {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+/* Only apply to checkbox in the task adding section */
+#important {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+button {
+    cursor: pointer;
+    border: 2px solid rgb(61, 61, 61);
+    padding: 10px;
+    border-radius: 7px;
+}
+
+button:hover {
+    border-color: #000000;
+}
+
+
+/* SPECIFIC BUTTON STYLES */
+.submitButton {
+    width: 100%;
+    background-color: var(--add-button-color);
+    color: white;
+    font-size: large;
+}
+.submitButton:hover {
+    background-color: color-mix(in srgb, var(--add-button-color) 97%, white);
+}
+.submitButton:active {
+    background-color: color-mix(in srgb, var(--add-button-color) 80%, black);
+}
+
+
+.deleteButton {
+    color: white;
+    background-color: var(--delete-button-color);
+}
+.deleteButton:hover {
+    background-color: color-mix(in srgb, var(--delete-button-color) 97%, white);
+}
+.deleteButton:active {
+    background-color: color-mix(in srgb, var(--delete-button-color) 80%, black);
+}

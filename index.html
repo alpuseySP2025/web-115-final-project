@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="index.js" defer></script>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="mainContainer centered">
+            <h1 class="centeredText">Task Manager</h1>
+            <div class="addContainer centered">
+                <h3>Add a task</h3>
+                <form id="addTask" class="flex">
+                    <div>
+                        <label for="name">Task Name</label>
+                        <input placeholder="Task Name" id="name" autocomplete="off" required>
+                    </div>
+            
+                    <div>
+                        <label for="priority">Task Priority</label>
+                        <select id="priority">
+                            <option>High</option>
+                            <option>Medium</option>
+                            <option>Low</option>
+                        </select>
+                    </div>
+            
+                    <div>
+                        <label for="important">Important</label>
+                        <input type="checkbox" id="important">
+                    </div>
+
+                    <button class="submitButton" type="submit">Add Task</button>
+                </form>
+            </div>
+    
+            <br>
+            <hr>
+
+            <div id="taskmanager" class="flex">
+                <h2 class="centeredText">Tasks</h2>
+                <i class="centeredText" id="blurb">Nothing to do? Neat!</i>
+            </div>
+        </div>
+    </body>
+</html>
