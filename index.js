@@ -29,10 +29,6 @@ function onFormSubmit(event) {
 const form = document.getElementById("addTask");
 form.addEventListener("submit", onFormSubmit);
 
-// Utility for finding a task by its ID
-function findTaskIndex(id) {
-    return tasks.findIndex(t => t.id === id);
-}
 
 function addTask(name, priority, isImportant) {
     const addedDate = new Date();
